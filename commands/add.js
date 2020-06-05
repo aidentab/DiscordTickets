@@ -31,6 +31,8 @@ module.exports = {
         const err1 = new Discord.RichEmbed()
             .setColor("#E74C3C")
             .setDescription(`:x: **Unknown user.** Please mention a valid user.`)
+            .setFooter(`Discord Unofficial Support`)  
+            .setTimestamp()
             return message.channel.send(err1);
       } else {
         return message.channel.send(`:x: **Unknown user.** Please mention a valid user.`);
@@ -46,6 +48,8 @@ module.exports = {
       const added = new Discord.RichEmbed()
           .setColor(config.colour)
           .setDescription(`${user} has been added.`)
+                  .setFooter(`Discord Unofficial Support`)  
+            .setTimestamp()
           message.channel.send(added);
     } else {
        message.channel.send(`${user} has been added.`);
@@ -59,7 +63,7 @@ module.exports = {
         .addField("Username", user, true)
         .addField("Added by", message.author, true)
         .addField("Channel", message.channel, true)
-        .setFooter(`DiscordTickets`)
+        .setFooter(`Discord Unofficial Support`) 
         .setTimestamp();
       client.channels.get(config.logChannel).send({embed})
     } else {
