@@ -1,0 +1,20 @@
+{
+  "token": "token",
+  "prefix": "!",
+  "name": "Discord Unofficial Support",
+  "guildID": "718557731593912370",
+  "supportRole": "718562313837346927",
+  "ticketsCat": "718558350023065700",
+  "logChannel": "718565022317543424",
+  "colour": "#9aabfc",
+  "playing": "Discord Unofficial Support",
+  "activityType": "WATCHING",
+  "status": "DND",
+  "useEmbeds": true,
+  "logDMs": true,
+  "cooldown": 3,
+  "ticketImage": false,
+  "tagHereOnly": false,
+  "ticketText": "Thank you for reaching out to our support team.\nA member of staff will come to assist you shortly. Please describe the issue in detail and explain what you have done to resolve the issue so far. Our bot may be able to help you before meeting a support member.",
+  "debugLevel": 0
+}
