@@ -55,30 +55,7 @@ const cooldowns = new Discord.Collection();
 const now = Date.now();
 
 const commands = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
-console.log(log.colour.magentaBright(`
-########  ####  ######   ######   #######  ########  ########
-##     ##  ##  ##    ## ##    ## ##     ## ##     ## ##     ##
-##     ##  ##  ##       ##       ##     ## ##     ## ##     ##
-##     ##  ##   ######  ##       ##     ## ########  ##     ##
-##     ##  ##        ## ##       ##     ## ##   ##   ##     ##
-##     ##  ##  ##    ## ##    ## ##     ## ##    ##  ##     ##
-########  ####  ######   ######   #######  ##     ## ########
 
-######## ####  ######  ##    ## ######## ########  ######
-   ##     ##  ##    ## ##   ##  ##          ##    ##    ##
-   ##     ##  ##       ##  ##   ##          ##    ##
-   ##     ##  ##       #####    ######      ##     ######
-   ##     ##  ##       ##  ##   ##          ##          ##
-   ##     ##  ##    ## ##   ##  ##          ##    ##    ##
-   ##    ####  ######  ##    ## ########    ##     ######
-
-  `)); // banner appears in console
-console.log(log.colour.yellow(leeks.styles.bold(`DiscordTickets v${version} - Made By Eartharoid`)));
-console.log(log.colour.yellow(leeks.styles.bold(homepage)));
-console.log('\n\n');
-console.log(log.colour.bgGrey(log.colour.grey(`\n\n==========================================================================\n\n`)))
-console.log('\n\n');
-log.init('DiscordTickets (bot created by Eartharoid)')
 // all log.* functions are logged to ./log/file.log from here onwards
 log.info(`Starting up...`)
 
@@ -101,7 +78,7 @@ client.once('ready', () => { // after bot has logged in
       .setAuthor(`${client.user.username} / Ticket Log`, client.user.avatarURL)
       .setColor("#2ECC71")
       .setDescription(":white_check_mark: **Started succesfully**")
-      .setFooter(`DiscordTickets by Eartharoid`);
+      .setFooter(`Discord Unofficial Support`);
     client.channels.get(config.logChannel).send(embed)
   } else {
     client.channels.get(config.logChannel).send(":white_check_mark: **Started succesfully**")
@@ -117,7 +94,7 @@ client.once('ready', () => { // after bot has logged in
         .setAuthor(`${client.user.username} / Ticket Log`, client.user.avatarURL)
         .setColor("#2ECC71")
         .setDescription(":white_check_mark: **Required permissions have been granted**")
-        .setFooter(`DiscordTickets by Eartharoid`);
+        .setFooter(`Discord Unofficial Support`);
       client.channels.get(config.logChannel).send(embed)
     } else {
       client.channels.get(config.logChannel).send(":white_check_mark: **Started succesfully**")
@@ -130,7 +107,7 @@ client.once('ready', () => { // after bot has logged in
         .setAuthor(`${client.user.username} / Ticket Log`, client.user.avatarURL)
         .setColor("#E74C3C")
         .setDescription(":x: **Required permissions have not been granted**\nPlease give the bot the `ADMINISTRATOR` permission")
-        .setFooter(`DiscordTickets by Eartharoid`);
+        .setFooter(`Discord Unofficial Support`);
       client.channels.get(config.logChannel).send({
         embed
       })
@@ -146,7 +123,7 @@ client.on('message', async message => {
   if (message.author.bot) return;
   if (message.channel.type === "dm") {
     if (message.author.id === client.user.id) return;
-    // message.channel.send(`Sorry, commands can only be used on the server.`)
+     message.channel.send(`Sorry, commands can only be used on the server.`)
     if (config.logDMs) {
       if (config.useEmbeds) {
         const embed = new Discord.RichEmbed()
@@ -154,7 +131,7 @@ client.on('message', async message => {
           .setTitle("DM Logger")
           .addField("Username", message.author.tag, true)
           .addField("Message", message.content, true)
-          .setFooter(`DiscordTickets by Eartharoid`);
+          .setFooter(`Discord Unofficial Support`);
         client.channels.get(config.logChannel).send(embed)
       } else {
         client.channels.get(config.logChannel).send(`DM received from **${message.author.tag} (${message.author.id})** : \n\n\`\`\`${message.content}\`\`\``);
@@ -241,7 +218,7 @@ client.on('message', async message => {
         .setTitle("Command Used")
         .addField("Username", message.author, true)
         .addField("Command", command.name, true)
-        .setFooter(`DiscordTickets`)
+        .setFooter(`Discord Unofficial Support`)
         .setTimestamp();
       client.channels.get(config.logChannel).send({embed})
     } else {
