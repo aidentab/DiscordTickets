@@ -104,7 +104,7 @@ module.exports = {
 					.setDescription(`\`${topic}\``)
 					.addField("Username", message.author, true)
 					.addField("Channel", c, true)
-					.setFooter(`DiscordTickets`)
+					.setFooter(`Alium Support`)
 					.setTimestamp();
 				client.channels.get(config.logChannel).send({
 					embed
