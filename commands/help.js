@@ -65,7 +65,7 @@ module.exports = {
 				const cmd = new Discord.RichEmbed()
 	        .setColor(config.colour)
 					.addField(`Command`,`\`${command.name}\``, true)
-	        .setFooter(`DiscordTickets by Eartharoid`);
+	        .setFooter(`Alium Support`);
 
 				if (command.aliases) cmd.addField("Aliases", `\`${command.aliases.join(', ')}\``, true);
 				if (command.description) cmd.addField("Description", `\`${command.description}\``, false);
