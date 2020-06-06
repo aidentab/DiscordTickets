@@ -19,7 +19,7 @@ module.exports = {
         const notTicket = new Discord.RichEmbed()
             .setColor("#E74C3C")
             .setDescription(`:x: **This command can only be used within a ticket channel**`)
-                .setFooter(`Discord Unofficial Support`) 
+                .setFooter(`Alium Support`) 
         .setTimestamp();
         return message.channel.send(notTicket);
       } else {
@@ -36,7 +36,7 @@ module.exports = {
   					.setColor(config.colour)
   	        .addField("Username", message.author, true)
   	        .addField("Channel", message.channel.name, true)
-  	        .setFooter(`Discord Unofficial Support`)
+  	        .setFooter(`Alium Support`)
   					.setTimestamp();
   	      client.channels.get(config.logChannel).send({embed})
   	    } else {
