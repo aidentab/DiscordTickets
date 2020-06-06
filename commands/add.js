@@ -31,7 +31,7 @@ module.exports = {
         const err1 = new Discord.RichEmbed()
             .setColor("#E74C3C")
             .setDescription(`:x: **Unknown user.** Please mention a valid user.`)
-            .setFooter(`Discord Unofficial Support`)  
+            .setFooter(`Alium Support`)  
             .setTimestamp()
             return message.channel.send(err1);
       } else {
@@ -63,7 +63,7 @@ module.exports = {
         .addField("Username", user, true)
         .addField("Added by", message.author, true)
         .addField("Channel", message.channel, true)
-        .setFooter(`Discord Unofficial Support`) 
+        .setFooter(`Alium Support`) 
         .setTimestamp();
       client.channels.get(config.logChannel).send({embed})
     } else {
